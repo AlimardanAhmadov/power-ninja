@@ -1,0 +1,474 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="container w-10 mx-auto lg:w-6/12 my-16">
+    <div class="question-box card pt-8 rounded-xl text-center relative">
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">Choose Your Service</h1>
+        <div class="section" data-section="choose-category">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Which service would you like to use?</span>
+
+            <div class="choices px-40 flex flex-col items-center justify-center gap-3 mt-12">
+                <button style="min-width: 173px;" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>Natural Gas</span>
+                </button>
+
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>Electric</span>
+                </button>
+            </div>
+
+            <div class="bg-white border-t pb-12 pt-6 mt-6 w-full">
+                <button class="disabled next-button btn flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-16 py-3 mx-auto">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="section" data-section="choose-category">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Choose your appropriate category</span>
+
+            <div class="choices px-40 flex flex-col items-center justify-center gap-3 mt-12">
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>Residental</span>
+                </button>
+
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>Small Commercial</span>
+                </button>
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6 w-full">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button disabled btn flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="section" data-section="choose-service-provider">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Choose your service provider</span>
+
+            <div class="choices px-40 flex flex-col items-center justify-center gap-3 mt-12">
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>AES Ohio</span>
+                </button>
+
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>American Electric Power</span>
+                </button>
+
+
+                <button style="min-width: 173px" class="flex flex-col border-2 rounded-lg items-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span>Duke Energy Ohio</span>
+                </button>
+
+
+                <button style="min-width: 173px" class="flex flex-row border-2 rounded-lg items-center justify-center px-10 py-4 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base gap-x-3 w-full">
+                    <span style="white-space: nowrap;">First Energy Companies</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button disabled btn flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- <div class="section text-center" data-section="service-type">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">What is your service type?</span>
+            <div class="choices flex flex-col gap-6 text-left mt-12 px-40">
+                <div class="w-full">
+                    <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="providerName">Service Type</label>
+                    <div class="menu-item p-0 relative cursor-pointer transition-colors duration-300 w-full border py-4 border-2 border-gray-200 pl-5 pr-10" style="border-width: 2px">
+                        <a class="w-full cursor-default rounded-md bg-white text-left text-md text-gray-700 ring-1 ring-inset ring-gray-291 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer dropdown-toggle">
+                            <p>Gas</p>
+                            <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2 rotate-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gray-400 mr-2" viewBox="0 0 512 512">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <ol class="sub-menu mt-4 w-full" style="max-width: 100%">
+                            <li class="sub-menu-item text-gray-700 text-sm">
+                                Gas
+                                <span class="selected-option" style="background-color: hsla(240,83.3%,66.3%,0.15);padding: 5px; border-radius: 50%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="0.8em" viewBox="0 0 448 512">
+                                        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Electric</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="providerName">User Category</label>
+                    <div class="menu-item p-0 relative cursor-pointer transition-colors duration-300 w-full border py-4 border-2 border-gray-200 pl-5 pr-10" style="border-width: 2px">
+                        <a class="w-full cursor-default rounded-md bg-white text-left text-md text-gray-700 ring-1 ring-inset ring-gray-291 focus:outline-none focus:ring-2 focus:ring-indigo-500  cursor-pointer dropdown-toggle">
+                            <p>Residental</p>
+                            <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2 rotate-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gray-400 mr-2" viewBox="0 0 512 512">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <ol class="sub-menu mt-4 w-full" style="max-width: 100%">
+                            <li class="sub-menu-item text-gray-700 text-sm">
+                                Residental
+                                <span class="selected-option" style="background-color: hsla(240,83.3%,66.3%,0.15);padding: 5px; border-radius: 50%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="0.8em" viewBox="0 0 448 512">
+                                        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Small Commercial</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Large Commercial/Industrial</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button btn flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div> -->
+
+        <div class="section text-center" data-section="customer-info">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Enter customer information</span>
+            <div class="flex flex-col gap-4 mt-4 text-center mt-12 px-40">
+                <div class="w-full text-left">
+                    <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="providerName">Current Provider Name</label>
+                    <input id="providerName" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text">
+                </div>
+        
+                <div class="w-full text-left">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="accountNumber">Account Number</label>
+                    </div>
+        
+                    <input id="accountNumber" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-4 text-center px-40" style="margin-bottom: 20px">
+                <div class="w-full text-left">
+                    <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="providerName">Customer Name</label>
+                    <input id="providerName" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text">
+                </div>
+        
+                <div class="w-full text-left">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="accountNumber">Last Bill Date</label>
+                    </div>
+        
+                    <div>
+                        <input type="date" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6 w-full">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button btn disabled flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section text-center" data-section="address-info">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">What is your address?</span>
+            
+            <div class="flex flex-flow gap-4 mt-12 px-40">
+                <div class="w-full">
+
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="state">State</label>
+                    </div>
+        
+                    <div class="menu-item p-0 relative cursor-pointer transition-colors duration-300 w-full border py-4 border-2 border-gray-200 pl-5 pr-10" style="border-width: 2px">
+                        <a class="w-full cursor-default rounded-md bg-white text-left text-md text-gray-700 ring-1 ring-inset ring-gray-291 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer dropdown-toggle">
+                            <p>Ohio</p>
+                            <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2 rotate-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gray-400 mr-2" viewBox="0 0 512 512">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <ol class="sub-menu mt-4 w-full" style="max-height: 300px; height: 300px; max-width: 100%; overflow-y: scroll;">
+                            <li class="sub-menu-item text-gray-700 text-sm">Alaska</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Arizona</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Arkansas</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">California</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Colorado</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Connecticut</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Delaware</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Florida</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Georgia</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Hawaii</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Idaho</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Illinois</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Indiana</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Iowa</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Kansas</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Kentucky</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Louisiana</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Maine</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Maryland</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Massachusetts</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Michigan</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Minnesota</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Mississippi</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Missouri</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Montana</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Nebraska</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Nevada</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">New Hampshire</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">New Jersey</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">New Mexico</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">New York</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">North Carolina</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">North Dakota</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">
+                                Ohio
+                                <span class="selected-option" style="background-color: hsla(240,83.3%,66.3%,0.15);padding: 5px; border-radius: 50%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="0.8em" viewBox="0 0 448 512">
+                                        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Oklahoma</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Oregon</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Pennsylvania</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Rhode Island</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">South Carolina</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">South Dakota</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Tennessee</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Texas</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Utah</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Vermont</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Virginia</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Washington</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">West Virginia</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Wisconsin</li>
+                            <li class="sub-menu-item text-gray-700 text-sm">Wyoming</li>
+                        </ol>                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-flow gap-4 mt-4 px-40">
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="city">City</label>
+                    </div>
+        
+                    <div>
+                        <input id="city" type="text" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="zipCode">ZIP Code</label>
+                    </div>
+        
+                    <div>
+                        <input id="zipCode" type="number" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-flow gap-4 mt-4 px-40">
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="accountNumber">Address Line 1.</label>
+                    </div>
+        
+                    <div>
+                        <input type="text" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-flow gap-4 mt-4 px-40" style="margin-bottom: 20px">
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="accountNumber">Address Line 2 (optional).</label>
+                    </div>
+        
+                    <div>
+                        <input type="text" class="block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button btn disabled flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section text-center" data-section="contact-info">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Enter your contact information</span>
+            
+            <div class="flex flex-col gap-4 mt-12 px-40" style="margin-bottom: 20px">
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="emailAddress">Email Address</label>
+                    </div>
+        
+                    <div>
+                        <input id="emailAddress" type="email" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <div class="flex justify-between">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="phoneNumber">Phone Number(optional)</label>
+                    </div>
+        
+                    <div>
+                        <input id="phoneNumber" type="number" class="required block w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 trasnsition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button btn disabled flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section text-center" data-section="credit-card-info">
+            <div class="flex justify-center mx-auto mb-6 mt-2">
+                <span style="background: var(--primary-color);" class="inline-block w-40 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-3 h-1 mr-1 rounded-full"></span>
+                <span style="background: var(--primary-color);" class="inline-block w-1 h-1 mr-1 rounded-full"></span>
+            </div>
+            <span class="text-md font-semibold text-center text-gray-800 text-center w-full">Enter your payment information</span>
+            
+            <div class="flex flex-col gap-4 mt-12 text-left px-40" style="margin-bottom: 20px">
+                <div class="flex flex-flow gap-4 mt-4">
+                    <div class="w-full relative">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="providerName">Credit Card Number</label>
+                        <div class="absolute ml-5" style="top: 46px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" style="fill: #848383;">
+                                <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z">
+                                </path>
+                            </svg>
+                        </div>
+                        <input id="creditCard" class="required block w-full px-4 py-3 pl-12 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text" maxlength="19">
+                    </div>
+                </div>
+    
+                <div class="flex flex-flow gap-4 mt-4">
+                    <div class="w-full">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="expirationMonth">Expiration Date</label>
+    
+                        <div class="w-full flex gap-2">
+                            <input id="expirationMonth" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text" maxlength="2">
+    
+                            <input id="expirationYear" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="text" maxlength="4">
+                        </div>
+                    </div>
+    
+                    <div class="">
+                        <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200" for="expirationMonth">CVV</label>
+    
+                        <div class="w-full">
+                            <input id="cvv" class="required block w-full px-4 py-3 text-gray-700 bg-white border-2 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="number">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="gap-4 mt-4">
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" id="checkbox" class="required form-checkbox h-6 w-6 text-purple-600 bg-purple-600 focus:ring-purple-400 transition duration-300">
+    
+                        <label class="text-sm">
+                            I understand and consent to Energy Ninja automatically switching my energy       provider based on the lowest cost option available.
+                            I have read and agree to the Terms of Service and Privacy Policy.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white flex flex-row gap-10 border-t w-full pb-12 pt-6 mt-6">
+                <button style="border: 2px solid var(--primary-color); color: var(--primary-color);" class="prev-button flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 ml-auto w-40">
+                    <span>Previous</span>
+                </button>
+
+                <button class="next-button btn disabled flex gap-x-3 whitespace-no-wrap text-sm sm:text-base items-center justify-center text-white rounded-md hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent py-3 mr-auto w-40">
+                    <span>Submit</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
